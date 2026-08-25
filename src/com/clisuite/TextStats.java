@@ -11,7 +11,8 @@ public class TextStats {
             try (Scanner toRead = new Scanner(toAccess)) {
                 while (toRead.hasNextLine()) {
                     String line = toRead.nextLine();
-                    System.out.println("Your file has "+charCount(line)+" characters");
+                    System.out.println("Your file has "+charCount(line)+" characters .");
+                    System.out.println("Your file has "+wordCount(line)+" words .");
                 }
             } catch (Exception e) {
                 System.out.println("Error :: " + e.getMessage());
@@ -25,5 +26,9 @@ public class TextStats {
         for (char i : line.toCharArray())
             if (i != ' ') c++;
         return c;
+    }
+    static long wordCount(String line){
+        long r=line.trim().split("\\s+").length;
+        return r;
     }
 }
