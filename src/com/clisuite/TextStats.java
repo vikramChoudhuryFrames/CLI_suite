@@ -11,7 +11,7 @@ public class TextStats {
             try (Scanner toRead = new Scanner(toAccess)) {
                 while (toRead.hasNextLine()) {
                     String line = toRead.nextLine();
-
+                    System.out.println("Your file has "+charCount(line)+" characters");
                 }
             } catch (Exception e) {
                 System.out.println("Error :: " + e.getMessage());
@@ -19,7 +19,11 @@ public class TextStats {
         } else System.out.println("Please check the File Path !");
     }
 
-    static int charCount(String line) {
-
+    static long charCount(String line) {
+        line = line.strip();
+        long c = 0;
+        for (char i : line.toCharArray())
+            if (i != ' ') c++;
+        return c;
     }
 }

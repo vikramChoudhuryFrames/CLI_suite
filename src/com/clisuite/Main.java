@@ -22,7 +22,9 @@ public class Main {
                     int l = sc.nextInt();
                     e1.generate(l);
                     break;
-                case 2:
+                case 2://Text File Analyzer
+                    TextStats e2=new TextStats();
+                    e2.analyzeText();
                     break;
                 case 3:
                     break;
