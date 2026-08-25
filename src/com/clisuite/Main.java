@@ -30,14 +30,18 @@ public class Main {
                     break;
                 case 3://Text Base64 encoder
                     Base64Tool e3=new Base64Tool();
-                    e3.encoder();
+                    System.out.println("Encode or Decode ? E/D");
+                    String co=sc.next();
+                    if(co.equalsIgnoreCase("E")) e3.encoder();
+                    else e3.decoder();
+
                 break;
                 case 4:
                     System.out.println("==========End of Program==========\n");
                     System.exit(0);
                     break;
             }
-            System.out.println("Continue ? Y/N : ");
+            System.out.print("Continue ? Y/N : ");
              ch=(sc.next()).charAt(0);
         }
     }
