@@ -28,7 +28,7 @@ public class Main {
                     TextStats e2=new TextStats();
                     e2.analyzeText();
                     break;
-                case 3://Text Base64 encoder
+                case 3://Base64 encoder and Decoder
                     Base64Tool e3=new Base64Tool();
                     System.out.println("Encode or Decode ? E/D");
                     String co=sc.next();
