@@ -12,7 +12,9 @@ public class Main {
                 System.out.println(":: 2 ::Word and Line Counter\n");
                 System.out.println(":: 3 ::Base64 EnCoder/ Decoder\n");
                 System.out.println(":: 4 ::Exit\n");
+                System.out.print("Choice : ");
                 c = sc.nextInt();
+                System.out.println();
             }
             else c=4;
             switch(c) {
@@ -26,8 +28,10 @@ public class Main {
                     TextStats e2=new TextStats();
                     e2.analyzeText();
                     break;
-                case 3:
-                    break;
+                case 3://Text Base64 encoder
+                    Base64Tool e3=new Base64Tool();
+                    e3.encoder();
+                break;
                 case 4:
                     System.out.println("==========End of Program==========\n");
                     System.exit(0);
