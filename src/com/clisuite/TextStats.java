@@ -2,6 +2,7 @@ package com.clisuite;
 import java.util.Scanner;
 import java.io.File;
 public class TextStats {
+    static long chCount,wrCount;
     void analyzeText() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Paste the source file path here -> ");
@@ -9,11 +10,14 @@ public class TextStats {
         File toAccess = new File(path);
         if (toAccess.exists()) {
             try (Scanner toRead = new Scanner(toAccess)) {
+                String line=null;
                 while (toRead.hasNextLine()) {
-                    String line = toRead.nextLine();
-                    System.out.println("Your file has "+charCount(line)+" characters .");
-                    System.out.println("Your file has "+wordCount(line)+" words .");
+                    line = toRead.nextLine();
+                    charCount(line);
+                    wordCount(line);
                 }
+                System.out.println("Your file has "+chCount+" characters .");
+                System.out.println("Your file has "+wrCount+" words .");
             } catch (Exception e) {
                 System.out.println("Error :: " + e.getMessage());
             }
@@ -22,13 +26,13 @@ public class TextStats {
 
     static long charCount(String line) {
         line = line.strip();
-        long c = 0;
+        ;
         for (char i : line.toCharArray())
-            if (i != ' ') c++;
-        return c;
+            if (i != ' ') chCount++;
+        return chCount;
     }
     static long wordCount(String line){
-        long r=line.trim().split("\\s+").length;
-        return r;
+        wrCount+=line.trim().split("\\s+").length;
+        return wrCount;
     }
 }
