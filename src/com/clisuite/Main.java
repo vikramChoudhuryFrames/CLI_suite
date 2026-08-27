@@ -37,9 +37,12 @@ public class Main {
 
                 break;
                 case 4:
+                    SystemInfoTool e4=new SystemInfoTool();
+                    e4.displayInfo();
+                    break;
+                case 5:
                     System.out.println("=========End of Program=========\n");
-                    ex e4 =new ex();
-                    e4.exi();
+                    System.exit(0);
                     break;
             }
             System.out.print("Continue ? Y/N : ");
