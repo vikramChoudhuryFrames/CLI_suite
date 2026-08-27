@@ -34,13 +34,8 @@ public class Main {
                     String co=sc.next();
                     if(co.equalsIgnoreCase("E")) e3.encoder();
                     else e3.decoder();
-
                 break;
                 case 4:
-                    SystemInfoTool e4=new SystemInfoTool();
-                    e4.displayInfo();
-                    break;
-                case 5:
                     System.out.println("=========End of Program=========\n");
                     System.exit(0);
                     break;
