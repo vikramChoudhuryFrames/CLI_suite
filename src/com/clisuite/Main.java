@@ -37,7 +37,7 @@ public class Main {
 
                 break;
                 case 4:
-                    System.out.println("==========End of Program==========\n");
+                    System.out.println("=========End of Program=========\n");
                     System.exit(0);
                     break;
             }
