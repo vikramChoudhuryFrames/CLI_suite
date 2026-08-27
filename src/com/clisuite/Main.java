@@ -38,7 +38,8 @@ public class Main {
                 break;
                 case 4:
                     System.out.println("=========End of Program=========\n");
-                    System.exit(0);
+                    ex e4 =new ex();
+                    e4.exi();
                     break;
             }
             System.out.print("Continue ? Y/N : ");
